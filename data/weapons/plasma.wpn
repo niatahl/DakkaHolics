@@ -7,7 +7,7 @@
 	"turretGlowSprite":"graphics/weapons/plasma_cannon_turret_glow.png",
 	"hardpointSprite":"graphics/weapons/plasma_cannon_hardpoint_base.png",
 	"hardpointGlowSprite":"graphics/weapons/plasma_cannon_hardpoint_glow.png",
-	"everyFrameEffect":"data.scripts.weapons.dakka_PlasmaGlowEffect",
+	#"everyFrameEffect":"data.scripts.weapons.dakka_PlasmaGlowEffect",
 	"turretOffsets":[5, 0],
 	"turretAngleOffsets":[0],
 	"hardpointOffsets":[15, 0],

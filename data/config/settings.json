@@ -1,4 +1,7 @@
 {
+	"plugins":{
+		"dakka_ProjectileGlowPlugin":"data.scripts.plugins.dakka_ProjectileGlowPlugin",
+	},
 	"graphics":{
 		"fx":{
 			"tahlan_trail_clean":"graphics/tahlan/fx/trails_clean.png",

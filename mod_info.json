@@ -7,4 +7,5 @@
 	"description":"'Also honestly Nia? I seriously wish you weren't making this mod... ' -MesoTroniK",
 	"gameVersion":"0.95a-RC69",
 	"replace":["data/weapons/plasma.wpn"],
+	"jars":["jars/DakkaHolics.jar"]
 }
