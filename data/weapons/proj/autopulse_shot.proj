@@ -1,0 +1,14 @@
+{
+	"everyFrameEffect":"data.scripts.weapons.tahlan_ProjectileGlowEffect",
+	"length":90.0,
+	"width":12.0,
+	"hitGlowRadius":50,
+	"fadeTime":0.25,
+	"fringeColor":[0,0,255,255],
+	"glowColor": [50,50,255,20],
+	"glowRadius":50,
+	"coreColor":[255,255,255,200],
+	"textureType":"SMOOTH",  # only needed for BEAM spawnType
+	"textureScrollSpeed":-256.0,
+	"pixelsPerTexel":1.0
+}

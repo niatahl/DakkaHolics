@@ -1,0 +1,10 @@
+{
+	"length":60.0,
+	"hitGlowRadius":38,
+	"width":5,
+	"fadeTime":0.20,
+	"fringeColor":[235,255,215,235],
+	"coreColor":[225,255,205,200],
+	"glowColor": [245,255,235,20],
+	"glowRadius":30,
+}

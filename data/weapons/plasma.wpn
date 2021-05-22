@@ -1,0 +1,29 @@
+{
+	"id":"plasma",  # this id must match what's in the spreadsheet
+	"specClass":"projectile",
+	"type":"ENERGY",
+	"size":"LARGE",
+	"turretSprite":"graphics/weapons/plasma_cannon_turret_base.png",
+	"turretGlowSprite":"graphics/weapons/plasma_cannon_turret_glow.png",
+	"hardpointSprite":"graphics/weapons/plasma_cannon_hardpoint_base.png",
+	"hardpointGlowSprite":"graphics/weapons/plasma_cannon_hardpoint_glow.png",
+	"everyFrameEffect":"data.scripts.weapons.dakka_PlasmaGlowEffect",
+	"turretOffsets":[5, 0],
+	"turretAngleOffsets":[0],
+	"hardpointOffsets":[15, 0],
+	"hardpointAngleOffsets":[0],
+	"barrelMode":"ALTERNATING", # or LINKED.  whether barrels fire at the same time or alternate.
+	"animationType":"GLOW_AND_FLASH",
+	"glowColor":[255,100,150,255],
+	"muzzleFlashSpec":{"length":50.0,   # only used if animationType = MUZZLE_FLASH
+					   "spread":20.0,
+					   "particleSizeMin":20.0,
+					   "particleSizeRange":60.0,
+					   "particleDuration":0.05,
+					   "particleCount":15,
+					   "particleColor":[255,60,100,205]},
+	"interruptibleBurst":false,
+	"autocharge":true,  # whether the weapon will continue charging and fire if the LMB is tapped instead of held
+	"projectileSpecId":"plasma_shot",  # projectile that will be fired
+	"fireSoundTwo":"plasma_cannon_fire",
+}

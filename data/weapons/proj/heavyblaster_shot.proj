@@ -1,0 +1,8 @@
+{
+	"length":45.0,
+	"width":10,
+	"fringeColor":[100,100,255,255],
+	"coreColor":[255,255,255,255],
+	"glowColor":[100,100,255,75],
+	"glowRadius":45,
+}
