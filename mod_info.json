@@ -1,11 +1,14 @@
 {
-	"id":"zzz_dakkasounds", # internal id
+	"id":"zzz_DakkaHolics", # internal id
 	"name":"zzz Dakkaholics Anonymous", # displayed to the player
 	"utility":"true",
 	"author":"Nia",
-	"version":"1.0",
+	"version":"1.1",
 	"description":"'Also honestly Nia? I seriously wish you weren't making this mod... ' -MesoTroniK",
 	"gameVersion":"0.95a-RC69",
-	"replace":["data/weapons/plasma.wpn"],
-	"jars":["jars/DakkaHolics.jar"]
+	"replace":[
+		"data/weapons/plasma.wpn"
+	],
+	"jars":["jars/DakkaHolics.jar"],
+	"modPlugin":"data.scripts.dakka_ModPlugin"
 }

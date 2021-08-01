@@ -23,6 +23,10 @@ public class dakka_PlasmaGlowEffect implements EveryFrameWeaponEffectPlugin, OnF
     @Override
     public void advance(float amount, CombatEngineAPI engine, WeaponAPI weapon) {
 
+        if (weapon.getSlot().getWeaponType() == WeaponAPI.WeaponType.ENERGY)  {
+
+        }
+
         List<DamagingProjectileAPI> toRemove = new ArrayList<>();
 
         for (DamagingProjectileAPI proj : registeredProjectiles) {

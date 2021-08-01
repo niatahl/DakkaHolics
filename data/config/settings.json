@@ -16,7 +16,12 @@
 			"tahlan_trail_foggy":"graphics/tahlan/fx/trails_foggy.png",
 			"tahlan_trail_twin":"graphics/tahlan/fx/trails_twin.png", 
 			"tahlan_trail_glow":"graphics/tahlan/fx/trails_glow.png",
-			"tahlan_dakka_glow":"graphics/fx/particlealpha64sq.png",
+			"tahlan_trail_shockwave":"graphics/tahlan/fx/trails_shockwave.png",
+			"dakka_shockwave":"graphics/fx/dakka_shockwave.png",
 		},
+		"glow_fx":{
+			"dakka_base_glow":"graphics/fx/particlealpha64sq.png",
+			"dakka_blaster_glow":"graphics/fx/wind_effect.png",
+		}
 	}
 }
