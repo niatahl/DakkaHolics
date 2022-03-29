@@ -11,7 +11,7 @@ import java.awt.*;
 
 public class dakka_GaussOnFireEffect implements OnFireEffectPlugin {
 
-    static final int NUM_PARTICLES = 70;
+    static final int NUM_PARTICLES = 100;
 
     @Override
     public void onFire(DamagingProjectileAPI projectile, WeaponAPI weapon, CombatEngineAPI engine) {
@@ -21,8 +21,9 @@ public class dakka_GaussOnFireEffect implements OnFireEffectPlugin {
             float arcPoint = MathUtils.getRandomNumberInRange(projectile.getFacing()-5f, projectile.getFacing()+5f);
             Vector2f velocity = MathUtils.getPointOnCircumference(weapon.getShip().getVelocity(), MathUtils.getRandomNumberInRange(0f, 10f), MathUtils.getRandomNumberInRange(projectile.getFacing()-90f, projectile.getFacing()+90f));
             Vector2f spawnLocation = MathUtils.getPointOnCircumference(projectile.getLocation(), MathUtils.getRandomNumberInRange(0f, 110f), arcPoint);
-            spawnLocation = MathUtils.getRandomPointInCircle(spawnLocation,MathUtils.getRandomNumberInRange(0f,15f));
-            engine.addHitParticle(spawnLocation, velocity, MathUtils.getRandomNumberInRange(2f,4f), 10f, MathUtils.getRandomNumberInRange(0.2f,2f),new Color(122, 163, 255,200));
+            spawnLocation = MathUtils.getRandomPointInCircle(spawnLocation,MathUtils.getRandomNumberInRange(0f,5f));
+            engine.addHitParticle(spawnLocation, velocity, MathUtils.getRandomNumberInRange(2f,3f), 20f, MathUtils.getRandomNumberInRange(0.5f,3f),new Color(151, 180, 255,255));
+            //engine.addSmoothParticle(spawnLocation, velocity, MathUtils.getRandomNumberInRange(2f,4f), 15f, MathUtils.getRandomNumberInRange(0.5f,3f),new Color(151, 180, 255,255));
         }
     }
 }

@@ -18,6 +18,7 @@ minipulser_shot,dakka_base_glow,60,60,"[150,225,250,20]"
 vpdriver_shot,dakka_base_glow,100,100,"[150,225,250,20]"
 tpc_shot,dakka_base_glow,200,200,"[255,0,0,34]"
 railgun_shot,dakka_base_glow,60,60,"[255,255,255,30]"
+heavymauler_shot,dakka_base_glow,100,120,"[255,200,150,20]"
 ,,,,
 #HMI,,,,
 gauss_rem_shot,dakka_base_glow,200,200,"[95,175,255,60]"
@@ -26,9 +27,14 @@ pulselaser_rem_shot,dakka_base_glow,110,190,"[70,70,255,40]"
 mark9_rem_shot,dakka_base_glow,100,100,"[155,225,255,30]"
 heavyac_rem_shot,dakka_base_glow,60,60,"[155,225,255,30]"
 lightdualac_rem_shot,dakka_base_glow,40,40,"[155,225,255,30]"
+railgun_rem_shot,dakka_base_glow,60,60,"[235,255,255,30]"
 ,,,,
 #ScalarTech,,,,
 tahlan_lace_shot,dakka_base_glow,110,160,"[100,200,255,30]"
 tahlan_lacette_shot,dakka_base_glow,110,160,"[100,200,255,30]"
 ,,,,
-#Tahlan,,,,
+#IndEvo,,,,
+IndEvo_pulsed_shot,dakka_base_glow,90,100,"[150,225,250,20]"
+IndEvo_Cryo_Shot,dakka_base_glow,300,400,"[100,150,255,20]"
+IndEvo_riftgun_shot,dakka_base_glow,120,180,"[100,60,255,50]"
+,,,,
