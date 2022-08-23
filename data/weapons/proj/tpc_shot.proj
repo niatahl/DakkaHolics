@@ -1,5 +1,6 @@
 {
     "onFireEffect":"data.scripts.weapons.dakka_TPCOnFireEffect",
+    "onHitEffect":"data.scripts.weapons.dakka_TPCOnHitEffect",
     "length":60.0,
 	"width":20,
 }

@@ -3,8 +3,8 @@ dakka_heavyac_trail,heavyac_shot,tahlan_trail_smooth,30,0,0,0.25,7,2,"[235,255,2
 dakka_lightac_trail,lightac_shot,tahlan_trail_smooth,30,0,0,0.2,6,2,"[235,255,215]","[40,50,20]",0.8,300,10,true,15,5,0,TRUE,TRUE,TRUE,20,60,0.3,0,0,0,true,false
 dakka_mark9_trail,mark9_shot,tahlan_trail_smooth,30,0,0,0.3,8,2,"[235,255,215]","[40,50,20]",0.8,300,10,true,15,5,0,TRUE,TRUE,TRUE,20,60,0.3,0,0,0,true,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-dakka_hephag_trail,hephag_shot,tahlan_trail_contrail,10,0.05,0.05,0.15,12,14,"[255,220,50]","[40,30,20]",0.5,300,10,true,20,10,1,TRUE,FALSE,TRUE,20,0,0.3,0,30,0,true,false
-dakka_hephag_trail_2,hephag_shot,tahlan_trail_contrail,10,0.1,0.05,0.15,14,18,"[50,50,50]","[20,20,20]",0.25,300,10,true,0,10,1,TRUE,FALSE,FALSE,20,0,0.3,0,30,0,true,true
+dakka_hephag_trail,hephag_shot,tahlan_trail_smooth,10,0.05,0.1,0.05,5,1,"[255,255,255]","[40,30,20]",0.6,300,10,true,20,0,1,TRUE,FALSE,TRUE,20,0,0.3,0,30,0,true,false
+dakka_hephag_trail_2,hephag_shot,tahlan_trail_contrail,10,0.1,0.05,0.15,14,18,"[50,50,50]","[20,20,20]",0.3,300,10,true,0,5,1,TRUE,FALSE,FALSE,20,0,0.3,0,30,0,true,true
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 dakka_mjolnir_trail,mjolnir_shot,tahlan_trail_twin,10,0,0,0.8,5,80,"[200,210,255]","[200,210,255]",0.1,500,0,TRUE,0,10,1,TRUE,FALSE,TRUE,150,20,0,0,0,0,false,false
 dakka_mjolnir_trail_2,mjolnir_shot,tahlan_trail_twin,10,0,0,0.8,5,90,"[200,210,255]","[200,210,255]",0.1,500,0,TRUE,0,10,1,TRUE,FALSE,TRUE,150,20,0,0,0,0,false,false
@@ -20,14 +20,14 @@ dakka_heavymortar_trail_2,heavymortar_shot,base_trail_zap,10,0,0,0.3,10,10,"[255
 dakka_lightmortar_trail,lightmortar_shot,base_trail_heavySmoke,10,0.05,0.05,0.5,8,14,"[50,50,50]","[20,20,20]",0.5,300,5,TRUE,0,2,1,TRUE,FALSE,FALSE,0,0,0,0,0,0,true,false
 dakka_lightmortar_trail_2,lightmortar_shot,base_trail_zap,10,0,0,0.25,8,8,"[255,120,60]","[204,50,50]",0.6,300,5,TRUE,0,0,1,TRUE,FALSE,TRUE,0,0,0,0,0,0,false,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-dakka_railgun,railgun_shot,tahlan_trail_shockwave,10,0,0,0.3,5,30,"[200,200,255]","[200,200,255]",0.5,32,0,TRUE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
+dakka_railgun,railgun_shot,tahlan_trail_shockwave,10,0,0,0.3,5,30,"[200,200,255]","[200,200,255]",0.5,32,0,FALSE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
 dakka_railgun_2,railgun_shot,tahlan_trail_flow,10,0,0,0.6,15,30,"[200,200,255]","[200,200,255]",0.1,300,0,TRUE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-dakka_railgun_rem,railgun_rem_shot,tahlan_trail_shockwave,10,0,0,0.3,5,30,"[200,200,255]","[200,200,255]",0.5,32,0,TRUE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
+dakka_railgun_rem,railgun_rem_shot,tahlan_trail_shockwave,10,0,0,0.3,5,30,"[200,200,255]","[200,200,255]",0.5,32,0,FALSE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
 dakka_railgun_rem_2,railgun_rem_shot,tahlan_trail_flow,10,0,0,0.6,15,30,"[200,200,255]","[200,200,255]",0.1,300,0,TRUE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-dakka_gauss,gauss_shot,tahlan_trail_shockwave,10,0,0,1,15,80,"[200,200,255]","[200,200,255]",0.5,128,0,TRUE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
-dakka_gauss_rem,gauss_rem_shot,tahlan_trail_shockwave,10,0,0,0.8,15,80,"[180,200,255]","[180,200,255]",0.5,128,0,TRUE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
+dakka_gauss,gauss_shot,tahlan_trail_shockwave,10,0,0,1,15,80,"[200,200,255]","[200,200,255]",0.5,128,0,FALSE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
+dakka_gauss_rem,gauss_rem_shot,tahlan_trail_shockwave,10,0,0,0.8,15,80,"[180,200,255]","[180,200,255]",0.5,128,0,FALSE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
 dakka_gauss_rem_2,gauss_rem_shot,trails_trail_zappy,10,0,0,0.8,7,3,"[120,200,255]","[180,190,255]",0.4,-1,0,TRUE,30,0,1,TRUE,FALSE,TRUE,15,80,0.6,0,0,200,true,false
 dakka_gauss_rem_3,gauss_rem_shot,trails_trail_zappy,10,0,0,0.8,7,3,"[120,200,255]","[180,190,255]",0.4,-1,0,TRUE,30,0,1,TRUE,FALSE,TRUE,15,80,0.4,0,0,200,true,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
@@ -36,6 +36,6 @@ dakka_disintegrator_trail2,disintegrator_shot,tahlan_trail_beam,10,0,0,0.15,30,5
 dakka_degrader_trail,IndEvo_degrader_shot,trails_trail_zappy,10,0,0,0.1,40,5,"[183,65,13]","[183,65,13]",0.5,300,0,TRUE,10,20,1,TRUE,FALSE,TRUE,0,0,0,0,0,0,false,false
 dakka_degrader_trail2,IndEvo_degrader_shot,tahlan_trail_beam,10,0,0,0.075,24,5,"[255,255,255]","[255,255,255]",0.8,300,0,TRUE,10,5,1,TRUE,FALSE,TRUE,0,0,0,0,0,0,false,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-dakka_tpc_trail,tpc_shot,trails_trail_zappy,10,0,0,0.15,50,5,"[255,0,0]","[255,50,0]",1,1000,0,TRUE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
+dakka_tpc_trail,tpc_shot,trails_trail_zappy,10,0,0,0.15,40,5,"[255,0,0]","[255,50,0]",1,1000,0,TRUE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
 dakka_tpc_trail2,tpc_shot,trails_trail_zappy,10,0,0,0.1,20,5,"[255,255,255]","[255,255,255]",1,1000,0,TRUE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,

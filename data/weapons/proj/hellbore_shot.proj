@@ -1,0 +1,4 @@
+{
+    "onHitEffect":"data.scripts.weapons.dakka_HellboreOnHitEffect",
+    "onFireEffect":"data.scripts.weapons.dakka_HellboreOnFireEffect"
+}
