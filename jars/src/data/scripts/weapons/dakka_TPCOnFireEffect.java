@@ -4,6 +4,7 @@ import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.WeaponAPI;
+import com.fs.starfarer.api.util.Misc;
 import org.lazywizard.lazylib.MathUtils;
 
 import java.awt.*;
@@ -29,6 +30,15 @@ public class dakka_TPCOnFireEffect implements OnFireEffectPlugin {
                 MathUtils.getRandomNumberInRange(0.6f, 1.6f),
                 new Color(150,150,150,100),
                 true
+        );
+
+        engine.addHitParticle(
+                projectile.getLocation(),
+                Misc.ZERO,
+                200f,
+                1f,
+                0.1f,
+                effectCol.brighter()
         );
 
         engine.spawnExplosion(
