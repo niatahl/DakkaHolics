@@ -6,7 +6,6 @@ import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.ProximityExplosionEffect;
 import com.fs.starfarer.api.util.Misc;
 import org.lazywizard.lazylib.MathUtils;
-import org.lwjgl.util.vector.Vector2f;
 
 import java.awt.*;
 
@@ -15,27 +14,45 @@ public class dakka_FlakOnExplosionEffect implements ProximityExplosionEffect {
     public void onExplosion(DamagingProjectileAPI explosion, DamagingProjectileAPI originalProjectile) {
         CombatEngineAPI engine = Global.getCombatEngine();
 
+        Color effectCol = new Color(
+                originalProjectile.getProjectileSpec().getFringeColor().getRed(),
+                originalProjectile.getProjectileSpec().getFringeColor().getGreen(),
+                originalProjectile.getProjectileSpec().getFringeColor().getBlue(),
+                70
+        );
+
         engine.addHitParticle(
-                originalProjectile.getLocation(),
+                explosion.getLocation(),
                 Misc.ZERO,
-                100f,
-                1f,
+                explosion.getCollisionRadius()*2f,
+                0.8f,
                 0.1f,
-                originalProjectile.getProjectileSpec().getCoreColor()
+                effectCol
+        );
+
+        engine.addSmoothParticle(
+                explosion.getLocation(),
+                Misc.ZERO,
+                explosion.getCollisionRadius()*3f,
+                0.8f,
+                0.1f,
+                effectCol
         );
 
         for (int i = 0; i < 10; i++) {
             engine.addNebulaParticle(
-                    originalProjectile.getLocation(),
-                    MathUtils.getRandomPointInCircle(Misc.ZERO,30f),
-                    MathUtils.getRandomNumberInRange(25f, 50f),
-                    1.5f,
-                    0.1f,
+                    explosion.getLocation(),
+                    MathUtils.getRandomPointInCircle(Misc.ZERO,15f),
+                    MathUtils.getRandomNumberInRange(explosion.getCollisionRadius()*0.5f, explosion.getCollisionRadius()*2f),
+                    2f,
+                    0f,
                     0.3f,
-                    MathUtils.getRandomNumberInRange(2f, 2.5f),
-                    new Color(50, 48, 45, 120),
+                    MathUtils.getRandomNumberInRange(1.5f, 3f),
+                    new Color(22, 21, 20, 140),
                     true
             );
         }
+
+
     }
 }

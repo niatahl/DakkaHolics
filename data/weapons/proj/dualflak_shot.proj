@@ -1,0 +1,18 @@
+{
+	"id":"dualflak_shot",
+	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
+					"onExplosionEffect":"data.scripts.weapons.dakka_FlakOnExplosionEffect",
+					"range":15,
+					"explosionSpec":{"duration":0.1f,
+									 "radius":30,
+									 "coreRadius":15, # full damage within core radius - also equal to proximity fuse range
+									 "collisionClass":PROJECTILE_FF,
+									 "collisionClassByFighter":PROJECTILE_FIGHTER,
+									 "particleSizeMin":3.0,
+									 "particleSizeRange":3.0,
+									 "particleDuration":0.3,
+									 "particleCount":100,
+									 "particleColor":[255,155,155,255],
+									 "sound":"explosion_flak"},
+					}
+}

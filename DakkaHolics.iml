@@ -12,5 +12,7 @@
     <orderEntry type="library" name="LazyLib-Kotlin" level="application" />
     <orderEntry type="library" name="Graphics" level="application" />
     <orderEntry type="library" name="MagicLib" level="application" />
+    <orderEntry type="library" name="Starsector API" level="application" />
+    <orderEntry type="library" name="LazyLib" level="application" />
   </component>
 </module>

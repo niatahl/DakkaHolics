@@ -4,9 +4,7 @@ import com.fs.starfarer.api.combat.CombatEngineAPI;
 import com.fs.starfarer.api.combat.DamagingProjectileAPI;
 import com.fs.starfarer.api.combat.OnFireEffectPlugin;
 import com.fs.starfarer.api.combat.WeaponAPI;
-import com.fs.starfarer.api.util.Misc;
 import org.lazywizard.lazylib.MathUtils;
-import org.lazywizard.lazylib.VectorUtils;
 import org.lwjgl.util.vector.Vector2f;
 
 import java.awt.*;
@@ -27,8 +25,10 @@ public class dakka_HellboreOnFireEffect implements OnFireEffectPlugin {
 
         Vector2f projVel;
         Vector2f smokeVel;
+        int num = weapon.getSize() == WeaponAPI.WeaponSize.LARGE ? 10 : 5;
+        float sizeMult = weapon.getSize() == WeaponAPI.WeaponSize.LARGE ? 2f : 1f;
 
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < num; i++) {
             projVel = new Vector2f();
             smokeVel = new Vector2f();
             projectile.getVelocity().normalise(projVel);
@@ -38,7 +38,7 @@ public class dakka_HellboreOnFireEffect implements OnFireEffectPlugin {
             engine.addNebulaParticle(
                     projectile.getLocation(),
                     smokeVel,
-                    MathUtils.getRandomNumberInRange(40f, 60f),
+                    MathUtils.getRandomNumberInRange(20f*sizeMult, 30f*sizeMult),
                     1.5f,
                     0.1f,
                     0.3f,
