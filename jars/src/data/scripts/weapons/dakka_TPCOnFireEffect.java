@@ -36,7 +36,7 @@ public class dakka_TPCOnFireEffect implements OnFireEffectPlugin {
                 projectile.getLocation(),
                 Misc.ZERO,
                 200f,
-                1f,
+                0.7f,
                 0.1f,
                 effectCol.brighter()
         );

@@ -1,0 +1,2 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sprite
+Quantum Guidance System,dakka_quantumGuidance,,,,"no_drop, offensive",Weapons,20000,,,,5,10,15,25,data.scripts.hullmods.dakka_QuantumGuidance,Causes all %s and %s projectiles fired from this ship to home in on targets.,Adds guidance to all projectiles,graphics/hullmods/targeting_supercomputer.png

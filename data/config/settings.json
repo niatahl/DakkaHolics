@@ -22,6 +22,7 @@
 			"tahlan_trail_foam":"graphics/tahlan/fx/Xhan_foam_trail.png",
 			"tahlan_trail_innerfoam":"graphics/tahlan/fx/Xhan_innerfoam_trail.png",
 			"dakka_shockwave":"graphics/fx/dakka_shockwave.png",
+			"dakka_blastwave":"graphics/fx/dakka_blastwave.png"
 		},
 		"glow_fx":{
 			"dakka_base_glow":"graphics/fx/particlealpha64sq.png",

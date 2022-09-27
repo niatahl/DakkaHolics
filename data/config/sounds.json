@@ -1,0 +1,8 @@
+{
+	"dakka_reaper_boom":
+	[
+		{"file":"sounds/dakka_fx/dakka_reaper_boom.ogg","pitch":1,"volume":1},
+		{"file":"sounds/dakka_fx/dakka_reaper_boom.ogg","pitch":1.2,"volume":1},
+		{"file":"sounds/dakka_fx/dakka_reaper_boom.ogg","pitch":1.1,"volume":1}
+	],
+}

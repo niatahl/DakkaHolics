@@ -21,12 +21,44 @@ public class dakka_PlasmaOnHitEffect implements OnHitEffectPlugin {
                 100
         );
 
-        engine.spawnExplosion(
+//        engine.spawnExplosion(
+//                projectile.getLocation(),
+//                Misc.ZERO,
+//                effectCol.brighter(),
+//                120f,
+//                0.3f
+//        );
+
+        engine.addHitParticle(
                 projectile.getLocation(),
                 Misc.ZERO,
-                effectCol.brighter(),
-                30f,
-                0.3f
+                200f,
+                0.8f,
+                0.1f,
+                effectCol
         );
+
+        engine.addSmoothParticle(
+                projectile.getLocation(),
+                Misc.ZERO,
+                300f,
+                0.8f,
+                0.1f,
+                effectCol
+        );
+
+        for (int i = 0; i < 5; i++) {
+            engine.addNebulaParticle(
+                    projectile.getLocation(),
+                    MathUtils.getRandomPointInCircle(Misc.ZERO,15f),
+                    MathUtils.getRandomNumberInRange(50f,100f),
+                    2f,
+                    0f,
+                    0.3f,
+                    MathUtils.getRandomNumberInRange(1.5f, 3f),
+                    new Color(197, 239, 246, 40),
+                    true
+            );
+        }
     }
 }

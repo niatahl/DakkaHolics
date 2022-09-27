@@ -39,3 +39,13 @@ dakka_degrader_trail2,IndEvo_degrader_shot,tahlan_trail_beam,10,0,0,0.075,24,5,"
 dakka_tpc_trail,tpc_shot,trails_trail_zappy,10,0,0,0.15,40,5,"[255,0,0]","[255,50,0]",1,1000,0,TRUE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
 dakka_tpc_trail2,tpc_shot,trails_trail_zappy,10,0,0,0.1,20,5,"[255,255,255]","[255,255,255]",1,1000,0,TRUE,0,0,1,TRUE,FALSE,TRUE,20,20,0,0,0,0,false,false
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+dakka_plasma_trail,plasma_shot,tahlan_trail_foggy,10,0,0,1.2,15,30,"[150,10,255]","[50,50,255]",0.2,500,0,TRUE,0,5,1,TRUE,FALSE,TRUE,150,20,0,0,0,0,false,false
+dakka_plasma_trail2,plasma_shot,tahlan_trail_twin,10,0,0,1.2,15,30,"[150,10,255]","[50,50,255]",0.3,500,0,TRUE,0,5,1,TRUE,FALSE,TRUE,150,20,0,0,0,0,false,false
+#dakka_plasma_trail3,plasma_shot,tahlan_trail_twin,10,0,0,1.2,15,20,"[150,10,255]","[50,50,255]",0.3,500,0,TRUE,0,15,1,TRUE,FALSE,TRUE,150,20,0,0,0,0,false,false
+dakka_plasma_trail4,plasma_shot,base_trail_zap,10,0,0,0.3,15,30,"[255,40,120]","[255,40,120]",0.5,1000,0,TRUE,0,30,1,TRUE,FALSE,TRUE,150,20,0,0,0,0,false,false
+dakka_plasma_trail5,plasma_shot,trails_trail_zappy,10,0,0,0.1,20,20,"[255,255,255]","[255,255,255]",1,500,100,TRUE,0,10,1,TRUE,FALSE,TRUE,100,50,0,0,0,0,false,false
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+trails_plasma_1,plasma_shot,base_trail_zap,10,0,0.1,0.1,15,10,"[205,100,255]","[255,50,100]",1,200,200,TRUE,20,0,1,TRUE,FALSE,TRUE,100,20,0.3,0,1000,200,true,false
+trails_plasma_2,plasma_shot,base_trail_zap,10,0,0.1,0.2,15,10,"[205,100,255]","[255,50,100]",0.9,200,200,TRUE,20,0,1,TRUE,FALSE,TRUE,100,20,0.3,0,1000,200,true,false
+trails_plasma_3,plasma_shot,base_trail_zap,10,0,0.1,0.3,15,10,"[205,205,255]","[145,0,205]",0.8,200,200,TRUE,20,0,1,TRUE,FALSE,TRUE,100,100,0.3,0,0,300,true,false
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,

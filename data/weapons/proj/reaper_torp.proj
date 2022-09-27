@@ -1,0 +1,21 @@
+{
+    "onHitEffect": "data.scripts.weapons.dakka_ReaperOnHitEffect",
+    "explosionColor":[255,100,100,155],
+    "explosionSpec": {
+        "duration": 0.1,
+        "radius": 175,
+        "coreRadius": 75,
+        "collisionClass": HITS_SHIPS_AND_ASTEROIDS,
+        "collisionClassByFighter": HITS_SHIPS_AND_ASTEROIDS,
+        "particleSizeMin": 5,
+        "particleSizeRange": 3,
+        "particleDuration": 1,
+        "particleCount": 200,
+        "particleColor": [
+            255,
+            155,
+            155,
+            55
+        ]
+    }
+}
