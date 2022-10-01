@@ -29,8 +29,8 @@ class dakka_ReaperOnHitEffect : OnHitEffectPlugin {
                 Global.getSettings().getSprite("fx", "dakka_blastwave"),
                 point,
                 Misc.ZERO,
-                Vector2f(100f, 100f),
-                Vector2f(1000f, 1000f),  //angle,
+                Vector2f(100f, 100f),   // initial size
+                Vector2f(1000f, 1000f),  // expansion
                 360 * Math.random().toFloat(),
                 0f,
                 Color(232, 104, 104, 100),

@@ -24,22 +24,16 @@ class dakka_QuantumGuidance : BaseHullMod() {
                 alreadyRegisteredProjectiles.add(proj)
                 val weapon = proj.weapon ?: continue
                 if (!(weapon.type == WeaponAPI.WeaponType.ENERGY || weapon.type == WeaponAPI.WeaponType.BALLISTIC)) continue
-                if (ship.getWeaponGroupFor(weapon) != null) {
-                    //WEAPON IN AUTOFIRE
-                    target = if (ship.getWeaponGroupFor(weapon).isAutofiring //weapon group is autofiring
-                            && ship.selectedGroupAPI !== ship.getWeaponGroupFor(weapon)) { //weapon group is not the selected group
-                        ship.getWeaponGroupFor(weapon).getAutofirePlugin(weapon).targetShip
-                    } else {
-                        ship.shipTarget
-                    }
-                }
+                target = ship.getWeaponGroupFor(weapon).let { group ->
+                    if (group.isAutofiring && group !== ship.selectedGroupAPI) weapon else ship.shipTarget
+                } as ShipAPI?
                 engine.addPlugin(dakka_ProjectileGuidancePlugin(proj, target))
             }
         }
 
-        //And clean up our registered projectile list
         val cloneList: List<DamagingProjectileAPI> = ArrayList(alreadyRegisteredProjectiles)
-        for (proj in cloneList) {
+
+        cloneList.forEach { proj ->
             if (!engine.isEntityInPlay(proj) || proj.didDamage()) {
                 alreadyRegisteredProjectiles.remove(proj)
             }
