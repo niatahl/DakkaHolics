@@ -17,7 +17,7 @@ class dakka_QuantumGuidance : BaseHullMod() {
     }
 
     override fun advanceInCombat(ship: ShipAPI, amount: Float) {
-        var target: ShipAPI? = null
+        var target: ShipAPI?
         val engine = Global.getCombatEngine()
         for (proj in CombatUtils.getProjectilesWithinRange(ship.location, ship.collisionRadius + 100f)) {
             if (!alreadyRegisteredProjectiles.contains(proj) && engine.isEntityInPlay(proj) && !proj.didDamage()) {

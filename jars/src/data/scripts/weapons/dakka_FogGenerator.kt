@@ -13,7 +13,6 @@ class dakka_FogGenerator : EveryFrameWeaponEffectPlugin {
     private val interval = IntervalUtil(0.1f, 0.15f)
 
     override fun advance(amount: Float, engine: CombatEngineAPI, weapon: WeaponAPI) {
-        val ship = weapon.ship
         interval.advance(amount)
         if (interval.intervalElapsed()) {
             engine.addNebulaParticle(

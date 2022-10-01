@@ -85,12 +85,12 @@ class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: Combat
     //Main advance method
     override fun advance(amount: Float, events: List<InputEventAPI>) {
         //Sanity checks
-        var amount = amount
+        var actualAmount = amount
         if (Global.getCombatEngine() == null) {
             return
         }
         if (Global.getCombatEngine().isPaused) {
-            amount = 0f
+            actualAmount = 0f
         }
 
         //Checks if our script should be removed from the combat engine
@@ -100,20 +100,20 @@ class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: Combat
         }
 
         //Ticks up our life counter: if we miscalculated, also top it off
-        lifeCounter += amount
+        lifeCounter += actualAmount
         if (lifeCounter > estimateMaxLife) {
             lifeCounter = estimateMaxLife
         }
 
         //Delays targeting if we have that enabled
         if (delayCounter < actualGuidanceDelay) {
-            delayCounter += amount
+            delayCounter += actualAmount
             return
         }
 
         //Tick the sway counter up here regardless of if we need it or not: helps reduce boilerplate code
-        swayCounter1 += amount * SWAY_PERIOD_PRIMARY
-        swayCounter2 += amount * SWAY_PERIOD_SECONDARY
+        swayCounter1 += actualAmount * SWAY_PERIOD_PRIMARY
+        swayCounter2 += actualAmount * SWAY_PERIOD_SECONDARY
         val swayThisFrame = Math.pow((1f - lifeCounter / estimateMaxLife).toDouble(), SWAY_FALLOFF_FACTOR.toDouble()).toFloat() *
                 ((FastTrig.sin(Math.PI * 2f * swayCounter1) * SWAY_AMOUNT_PRIMARY).toFloat() + (FastTrig.sin(Math.PI * 2f * swayCounter2) * SWAY_AMOUNT_SECONDARY).toFloat())
 
@@ -162,7 +162,7 @@ class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: Combat
                 while (angleDiffAbsolute > 180f) {
                     angleDiffAbsolute = Math.abs(angleDiffAbsolute - 360f)
                 }
-                facingSwayless += Misc.getClosestTurnDirection(facingSwayless, targetAngle) * Math.min(angleDiffAbsolute, actualTurnRate * amount)
+                facingSwayless += Misc.getClosestTurnDirection(facingSwayless, targetAngle) * Math.min(angleDiffAbsolute, actualTurnRate * actualAmount)
                 val pureVelocity = Vector2f(proj.velocity)
                 pureVelocity.x -= offsetVelocity!!.x
                 pureVelocity.y -= offsetVelocity!!.y
@@ -176,7 +176,7 @@ class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: Combat
                 while (angleDiffAbsolute > 180f) {
                     angleDiffAbsolute = Math.abs(angleDiffAbsolute - 360f)
                 }
-                facingSwayless += Misc.getClosestTurnDirection(facingSwayless, angleToHit) * Math.min(angleDiffAbsolute, actualTurnRate * amount)
+                facingSwayless += Misc.getClosestTurnDirection(facingSwayless, angleToHit) * Math.min(angleDiffAbsolute, actualTurnRate * actualAmount)
                 proj.facing = facingSwayless + swayThisFrame
                 proj.velocity.x = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).x
                 proj.velocity.y = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).y
@@ -188,7 +188,7 @@ class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: Combat
                 while (angleDiffAbsolute > 180f) {
                     angleDiffAbsolute = Math.abs(angleDiffAbsolute - 360f)
                 }
-                facingSwayless += Misc.getClosestTurnDirection(facingSwayless, angleToHit) * Math.min(angleDiffAbsolute, actualTurnRate * amount)
+                facingSwayless += Misc.getClosestTurnDirection(facingSwayless, angleToHit) * Math.min(angleDiffAbsolute, actualTurnRate * actualAmount)
                 proj.facing = facingSwayless + swayThisFrame
                 proj.velocity.x = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).x
                 proj.velocity.y = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).y
@@ -202,7 +202,7 @@ class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: Combat
                 while (angleDiffAbsolute > 180f) {
                     angleDiffAbsolute = Math.abs(angleDiffAbsolute - 360f)
                 }
-                facingSwayless += Misc.getClosestTurnDirection(facingSwayless, angleToHit) * Math.min(angleDiffAbsolute, actualTurnRate * amount)
+                facingSwayless += Misc.getClosestTurnDirection(facingSwayless, angleToHit) * Math.min(angleDiffAbsolute, actualTurnRate * actualAmount)
                 proj.facing = facingSwayless + swayThisFrame
                 proj.velocity.x = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).x
                 proj.velocity.y = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).y
