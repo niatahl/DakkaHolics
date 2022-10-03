@@ -1,4 +1,4 @@
-package data.scripts.plugins
+package org.niatahl.dakka.plugins
 
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin
@@ -13,7 +13,7 @@ import java.awt.Color
 import java.io.IOException
 import kotlin.math.roundToInt
 
-class dakka_ProjectileGlowPlugin : BaseEveryFrameCombatPlugin() {
+class ProjectileGlowPlugin : BaseEveryFrameCombatPlugin() {
     override fun init(engine: CombatEngineAPI) {
         if (Global.getSettings().isDevMode) {
             glowData
@@ -42,26 +42,27 @@ class dakka_ProjectileGlowPlugin : BaseEveryFrameCombatPlugin() {
             val specID = proj.projectileSpecId
             colorToUse = if (proj.isFading) {
                 Color(
-                        COLORS[specID]!!.red,
-                        COLORS[specID]!!.green,
-                        COLORS[specID]!!.blue,
-                        (COLORS[specID]!!.alpha * proj.brightness).roundToInt().coerceIn(0,255))
+                    COLORS[specID]!!.red,
+                    COLORS[specID]!!.green,
+                    COLORS[specID]!!.blue,
+                    (COLORS[specID]!!.alpha * proj.brightness).roundToInt().coerceIn(0, 255)
+                )
             } else {
                 COLORS[specID]
             }
             MagicRender.singleframe(
-                    Global.getSettings().getSprite("glow_fx", SPRITES[specID]),
-                    proj.location,
-                    Vector2f(SIZES_X[specID]!!, SIZES_Y[specID]!!),
-                    proj.facing - 90f,
-                    colorToUse,
-                    true
+                Global.getSettings().getSprite("glow_fx", SPRITES[specID]),
+                proj.location,
+                Vector2f(SIZES_X[specID]!!, SIZES_Y[specID]!!),
+                proj.facing - 90f,
+                colorToUse,
+                true
             )
         }
     }
 
     companion object {
-        private val LOG = Global.getLogger(dakka_ProjectileGlowPlugin::class.java)
+        private val LOG = Global.getLogger(ProjectileGlowPlugin::class.java)
 
         // HashMaps to make Nicke proud
         // Can reduce that to a single Map with lists of dataobjects at some point but cba right now
@@ -78,7 +79,8 @@ class dakka_ProjectileGlowPlugin : BaseEveryFrameCombatPlugin() {
                 COLORS.clear()
                 var glowData = JSONArray()
                 try {
-                    glowData = Global.getSettings().getMergedSpreadsheetDataForMod("id", "data/config/dakka/dakka_GlowData.csv", "zzz_DakkaHolics")
+                    glowData = Global.getSettings()
+                        .getMergedSpreadsheetDataForMod("id", "data/config/dakka/dakka_GlowData.csv", "zzz_DakkaHolics")
                 } catch (ex: IOException) {
                     LOG.error("unable to read Glow data")
                     LOG.error(ex)

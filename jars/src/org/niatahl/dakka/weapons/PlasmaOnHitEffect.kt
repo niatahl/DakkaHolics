@@ -1,4 +1,4 @@
-package data.scripts.weapons
+package org.niatahl.dakka.weapons
 
 import com.fs.starfarer.api.combat.CombatEngineAPI
 import com.fs.starfarer.api.combat.CombatEntityAPI
@@ -10,18 +10,18 @@ import org.lazywizard.lazylib.MathUtils
 import org.lwjgl.util.vector.Vector2f
 import java.awt.Color
 
-class dakka_PlasmaOnHitEffect : OnHitEffectPlugin {
+class PlasmaOnHitEffect : OnHitEffectPlugin {
     override fun onHit(projectile: DamagingProjectileAPI, target: CombatEntityAPI, point: Vector2f, shieldHit: Boolean, damageResult: ApplyDamageResultAPI, engine: CombatEngineAPI) {
         val effectCol = Color(
-                projectile.projectileSpec.fringeColor.red,
-                projectile.projectileSpec.fringeColor.green,
-                projectile.projectileSpec.fringeColor.blue,
-                100
+            projectile.projectileSpec.fringeColor.red,
+            projectile.projectileSpec.fringeColor.green,
+            projectile.projectileSpec.fringeColor.blue,
+            100
         )
 
         engine.addHitParticle(
                 projectile.location,
-                Misc.ZERO,
+            Misc.ZERO,
                 200f,
                 0.8f,
                 0.1f,
@@ -29,7 +29,7 @@ class dakka_PlasmaOnHitEffect : OnHitEffectPlugin {
         )
         engine.addSmoothParticle(
                 projectile.location,
-                Misc.ZERO,
+            Misc.ZERO,
                 300f,
                 0.8f,
                 0.1f,
@@ -38,13 +38,13 @@ class dakka_PlasmaOnHitEffect : OnHitEffectPlugin {
         for (i in 0..4) {
             engine.addNebulaParticle(
                     projectile.location,
-                    MathUtils.getRandomPointInCircle(Misc.ZERO, 15f),
-                    MathUtils.getRandomNumberInRange(50f, 100f),
+                MathUtils.getRandomPointInCircle(Misc.ZERO, 15f),
+                MathUtils.getRandomNumberInRange(50f, 100f),
                     2f,
                     0f,
                     0.3f,
-                    MathUtils.getRandomNumberInRange(1.5f, 3f),
-                    Color(197, 239, 246, 40),
+                MathUtils.getRandomNumberInRange(1.5f, 3f),
+                Color(197, 239, 246, 40),
                     true
             )
         }

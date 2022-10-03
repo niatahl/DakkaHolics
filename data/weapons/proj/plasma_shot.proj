@@ -1,5 +1,5 @@
 {
-	"onHitEffect":"data.scripts.weapons.dakka_PlasmaOnHitEffect",
+	"onHitEffect":"org.niatahl.dakka.weapons.PlasmaOnHitEffect",
 	"width":50.0,
 	"fringeColor":[100,100,255,255],
 	"coreColor":[255,100,100,255]

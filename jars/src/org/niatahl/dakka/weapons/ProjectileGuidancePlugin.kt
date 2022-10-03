@@ -1,14 +1,4 @@
-//By Nicke535, licensed under CC-BY-NC-SA 4.0 (https://creativecommons.org/licenses/by-nc-sa/4.0/)
-//General script meant to be modified for each implementation. Causes a projectile to rotate mid-flight depending on several settings, simulating guidance
-//HOW TO USE:
-//	Copy this file where you want it and rename+adjust values
-//	Find the projectile to guide using any method you want (everyframe script, weapon-mounted everyframe script, mine-spawning etc.)
-//	run "engine.addPlugin(tahlan_BalorProjectileScript(proj, target));" with:
-//		tahlan_BalorProjectileScript being replaced with your new class name
-//		proj being the projectile to guide
-//		target being the initial target (if any)
-//	You're done!
-package data.scripts.weapons
+package org.niatahl.dakka.weapons
 
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin
@@ -24,7 +14,7 @@ import org.lazywizard.lazylib.VectorUtils
 import org.lazywizard.lazylib.combat.CombatUtils
 import org.lwjgl.util.vector.Vector2f
 
-class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: CombatEntityAPI?) : BaseEveryFrameCombatPlugin() {
+class ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: CombatEntityAPI?) : BaseEveryFrameCombatPlugin() {
     //---Internal script variables: don't touch!---
     private val proj //The projectile itself
             : DamagingProjectileAPI?
@@ -65,13 +55,19 @@ class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: Combat
         swayCounter1 = MathUtils.getRandomNumberInRange(0f, 1f)
         swayCounter2 = MathUtils.getRandomNumberInRange(0f, 1f)
         lifeCounter = 0f
-        estimateMaxLife = proj.weapon.range / Vector2f(proj.velocity.x - proj.source.velocity.x, proj.velocity.y - proj.source.velocity.y).length()
+        estimateMaxLife = proj.weapon.range / Vector2f(
+            proj.velocity.x - proj.source.velocity.x,
+            proj.velocity.y - proj.source.velocity.y
+        ).length()
         delayCounter = 0f
         actualGuidanceDelay = MathUtils.getRandomNumberInRange(GUIDANCE_DELAY_MIN, GUIDANCE_DELAY_MAX)
 
         //For one-turns, we set our target point ONCE and never adjust it
         if (GUIDANCE_MODE_PRIMARY == "ONE_TURN_DUMB") {
-            targetAngle = proj.weapon.currAngle + MathUtils.getRandomNumberInRange(-ONE_TURN_DUMB_INACCURACY, ONE_TURN_DUMB_INACCURACY)
+            targetAngle = proj.weapon.currAngle + MathUtils.getRandomNumberInRange(
+                -ONE_TURN_DUMB_INACCURACY,
+                ONE_TURN_DUMB_INACCURACY
+            )
             offsetVelocity = proj.source.velocity
         } else if (GUIDANCE_MODE_PRIMARY == "ONE_TURN_TARGET") {
             targetPoint = MathUtils.getRandomPointInCircle(getApproximateInterception(25), ONE_TURN_TARGET_INACCURACY)
@@ -167,8 +163,16 @@ class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: Combat
                 pureVelocity.x -= offsetVelocity!!.x
                 pureVelocity.y -= offsetVelocity!!.y
                 proj.facing = facingSwayless + swayThisFrame
-                proj.velocity.x = MathUtils.getPoint(Vector2f(Misc.ZERO), pureVelocity.length(), facingSwayless + swayThisFrame).x + offsetVelocity!!.x
-                proj.velocity.y = MathUtils.getPoint(Vector2f(Misc.ZERO), pureVelocity.length(), facingSwayless + swayThisFrame).y + offsetVelocity!!.y
+                proj.velocity.x = MathUtils.getPoint(
+                    Vector2f(Misc.ZERO),
+                    pureVelocity.length(),
+                    facingSwayless + swayThisFrame
+                ).x + offsetVelocity!!.x
+                proj.velocity.y = MathUtils.getPoint(
+                    Vector2f(Misc.ZERO),
+                    pureVelocity.length(),
+                    facingSwayless + swayThisFrame
+                ).y + offsetVelocity!!.y
             } else if (GUIDANCE_MODE_PRIMARY == "ONE_TURN_TARGET") {
                 var facingSwayless = proj.facing - swayThisFrame
                 val angleToHit = VectorUtils.getAngle(proj.location, targetPoint)
@@ -178,34 +182,64 @@ class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: Combat
                 }
                 facingSwayless += Misc.getClosestTurnDirection(facingSwayless, angleToHit) * Math.min(angleDiffAbsolute, actualTurnRate * actualAmount)
                 proj.facing = facingSwayless + swayThisFrame
-                proj.velocity.x = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).x
-                proj.velocity.y = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).y
+                proj.velocity.x = MathUtils.getPoint(
+                    Vector2f(Misc.ZERO),
+                    proj.velocity.length(),
+                    facingSwayless + swayThisFrame
+                ).x
+                proj.velocity.y = MathUtils.getPoint(
+                    Vector2f(Misc.ZERO),
+                    proj.velocity.length(),
+                    facingSwayless + swayThisFrame
+                ).y
             } else if (GUIDANCE_MODE_PRIMARY.contains("DUMBCHASER")) {
                 var facingSwayless = proj.facing - swayThisFrame
                 val targetPointRotated = VectorUtils.rotate(Vector2f(targetPoint), target!!.facing)
-                val angleToHit = VectorUtils.getAngle(proj.location, Vector2f.add(target!!.location, targetPointRotated, Vector2f(Misc.ZERO)))
+                val angleToHit = VectorUtils.getAngle(
+                    proj.location,
+                    Vector2f.add(target!!.location, targetPointRotated, Vector2f(Misc.ZERO))
+                )
                 var angleDiffAbsolute = Math.abs(angleToHit - facingSwayless)
                 while (angleDiffAbsolute > 180f) {
                     angleDiffAbsolute = Math.abs(angleDiffAbsolute - 360f)
                 }
                 facingSwayless += Misc.getClosestTurnDirection(facingSwayless, angleToHit) * Math.min(angleDiffAbsolute, actualTurnRate * actualAmount)
                 proj.facing = facingSwayless + swayThisFrame
-                proj.velocity.x = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).x
-                proj.velocity.y = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).y
+                proj.velocity.x = MathUtils.getPoint(
+                    Vector2f(Misc.ZERO),
+                    proj.velocity.length(),
+                    facingSwayless + swayThisFrame
+                ).x
+                proj.velocity.y = MathUtils.getPoint(
+                    Vector2f(Misc.ZERO),
+                    proj.velocity.length(),
+                    facingSwayless + swayThisFrame
+                ).y
             } else if (GUIDANCE_MODE_PRIMARY.contains("INTERCEPT")) {
                 //We use fewer calculation steps for projectiles that are very close, as they aren't needed at close distances
                 val iterations = INTERCEPT_ITERATIONS
                 var facingSwayless = proj.facing - swayThisFrame
                 val targetPointRotated = VectorUtils.rotate(Vector2f(targetPoint), target!!.facing)
-                val angleToHit = VectorUtils.getAngle(proj.location, Vector2f.add(getApproximateInterception(iterations), targetPointRotated, Vector2f(Misc.ZERO)))
+                val angleToHit = VectorUtils.getAngle(
+                    proj.location,
+                    Vector2f.add(getApproximateInterception(iterations), targetPointRotated, Vector2f(Misc.ZERO))
+                )
                 var angleDiffAbsolute = Math.abs(angleToHit - facingSwayless)
                 while (angleDiffAbsolute > 180f) {
                     angleDiffAbsolute = Math.abs(angleDiffAbsolute - 360f)
                 }
                 facingSwayless += Misc.getClosestTurnDirection(facingSwayless, angleToHit) * Math.min(angleDiffAbsolute, actualTurnRate * actualAmount)
                 proj.facing = facingSwayless + swayThisFrame
-                proj.velocity.x = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).x
-                proj.velocity.y = MathUtils.getPoint(Vector2f(Misc.ZERO), proj.velocity.length(), facingSwayless + swayThisFrame).y
+                proj.velocity.x = MathUtils.getPoint(
+                    Vector2f(Misc.ZERO),
+                    proj.velocity.length(),
+                    facingSwayless + swayThisFrame
+                ).x
+                proj.velocity.y = MathUtils.getPoint(
+                    Vector2f(Misc.ZERO),
+                    proj.velocity.length(),
+                    facingSwayless + swayThisFrame
+                ).y
             }
         }
     }
@@ -220,14 +254,22 @@ class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: Combat
         val potentialTargets: MutableList<CombatEntityAPI> = ArrayList()
         if (VALID_TARGET_TYPES.contains("ASTEROID")) {
             for (potTarget in CombatUtils.getAsteroidsWithinRange(centerOfDetection, TARGET_REACQUIRE_RANGE)) {
-                if (potTarget.owner != proj!!.owner && Math.abs(VectorUtils.getAngle(proj.location, potTarget.location) - proj.facing) < TARGET_REACQUIRE_ANGLE) {
+                if (potTarget.owner != proj!!.owner && Math.abs(
+                        VectorUtils.getAngle(
+                            proj.location,
+                            potTarget.location
+                        ) - proj.facing) < TARGET_REACQUIRE_ANGLE) {
                     potentialTargets.add(potTarget)
                 }
             }
         }
         if (VALID_TARGET_TYPES.contains("MISSILE")) {
             for (potTarget in CombatUtils.getMissilesWithinRange(centerOfDetection, TARGET_REACQUIRE_RANGE)) {
-                if (potTarget.owner != proj!!.owner && Math.abs(VectorUtils.getAngle(proj.location, potTarget.location) - proj.facing) < TARGET_REACQUIRE_ANGLE) {
+                if (potTarget.owner != proj!!.owner && Math.abs(
+                        VectorUtils.getAngle(
+                            proj.location,
+                            potTarget.location
+                        ) - proj.facing) < TARGET_REACQUIRE_ANGLE) {
                     potentialTargets.add(potTarget)
                 }
             }
@@ -261,7 +303,11 @@ class dakka_ProjectileGuidancePlugin(proj: DamagingProjectileAPI, target: Combat
                 for (potTarget in potentialTargets) {
                     if (newTarget == null) {
                         newTarget = potTarget
-                    } else if (MathUtils.getDistance(newTarget, centerOfDetection) > MathUtils.getDistance(potTarget, centerOfDetection)) {
+                    } else if (MathUtils.getDistance(newTarget, centerOfDetection) > MathUtils.getDistance(
+                            potTarget,
+                            centerOfDetection
+                        )
+                    ) {
                         newTarget = potTarget
                     }
                 }

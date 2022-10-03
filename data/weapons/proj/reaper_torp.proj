@@ -1,5 +1,5 @@
 {
-    "onHitEffect": "data.scripts.weapons.dakka_ReaperOnHitEffect",
+    "onHitEffect": "org.niatahl.dakka.weapons.dakka_ReaperOnHitEffect",
     "explosionColor":[255,100,100,155],
     "explosionSpec": {
         "duration": 0.1,

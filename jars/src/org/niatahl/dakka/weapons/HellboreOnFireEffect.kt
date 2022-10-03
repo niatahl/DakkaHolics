@@ -1,4 +1,4 @@
-package data.scripts.weapons
+package org.niatahl.dakka.weapons
 
 import com.fs.starfarer.api.combat.CombatEngineAPI
 import com.fs.starfarer.api.combat.DamagingProjectileAPI
@@ -8,7 +8,7 @@ import org.lazywizard.lazylib.MathUtils
 import org.lwjgl.util.vector.Vector2f
 import java.awt.Color
 
-class dakka_HellboreOnFireEffect : OnFireEffectPlugin {
+class HellboreOnFireEffect : OnFireEffectPlugin {
     override fun onFire(projectile: DamagingProjectileAPI, weapon: WeaponAPI, engine: CombatEngineAPI) {
         val effectCol = Color(-0x5f259ef5, true)
         engine.addHitParticle(
@@ -32,12 +32,12 @@ class dakka_HellboreOnFireEffect : OnFireEffectPlugin {
             engine.addNebulaParticle(
                     projectile.location,
                     smokeVel,
-                    MathUtils.getRandomNumberInRange(20f * sizeMult, 30f * sizeMult),
+                MathUtils.getRandomNumberInRange(20f * sizeMult, 30f * sizeMult),
                     1.5f,
                     0.1f,
                     0.3f,
-                    MathUtils.getRandomNumberInRange(2f, 2.5f),
-                    Color(50, 48, 45, 120),
+                MathUtils.getRandomNumberInRange(2f, 2.5f),
+                Color(50, 48, 45, 120),
                     true
             )
         }

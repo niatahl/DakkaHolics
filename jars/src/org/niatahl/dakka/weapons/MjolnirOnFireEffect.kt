@@ -1,4 +1,4 @@
-package data.scripts.weapons
+package org.niatahl.dakka.weapons
 
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
@@ -7,7 +7,7 @@ import org.lazywizard.lazylib.VectorUtils
 import org.lwjgl.util.vector.Vector2f
 import java.awt.Color
 
-class dakka_MjolnirOnFireEffect : OnFireEffectPlugin, EveryFrameWeaponEffectPlugin {
+class MjolnirOnFireEffect : OnFireEffectPlugin, EveryFrameWeaponEffectPlugin {
     private var timeLeft = 0f
     private var currentBarrel = 1
     override fun onFire(projectile: DamagingProjectileAPI, weapon: WeaponAPI, engine: CombatEngineAPI) {
@@ -41,12 +41,15 @@ class dakka_MjolnirOnFireEffect : OnFireEffectPlugin, EveryFrameWeaponEffectPlug
             Vector2f.add(point, offset, point)
             val alpha = (230f - 220f / ANIMATION_TIME * (ANIMATION_TIME - timeLeft)).toInt().coerceIn(0,255)
             MagicRender.singleframe(
-                    Global.getSettings().getSprite("fx", "dakka_shockwave"),
-                    point,
-                    Vector2f(9f + 60f / ANIMATION_TIME * (ANIMATION_TIME - timeLeft), 3f + 20f / ANIMATION_TIME * (ANIMATION_TIME - timeLeft)),
-                    weapon.currAngle + 90f,
-                    Color(200, 210, 255, alpha),
-                    true
+                Global.getSettings().getSprite("fx", "dakka_shockwave"),
+                point,
+                Vector2f(
+                    9f + 60f / ANIMATION_TIME * (ANIMATION_TIME - timeLeft),
+                    3f + 20f / ANIMATION_TIME * (ANIMATION_TIME - timeLeft)
+                ),
+                weapon.currAngle + 90f,
+                Color(200, 210, 255, alpha),
+                true
             )
         }
     }

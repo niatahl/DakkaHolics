@@ -1,15 +1,14 @@
-package data.scripts.weapons
+package org.niatahl.dakka.weapons
 
-import com.fs.starfarer.api.Global
-import com.fs.starfarer.api.combat.*
+import com.fs.starfarer.api.combat.CombatEngineAPI
+import com.fs.starfarer.api.combat.EveryFrameWeaponEffectPlugin
+import com.fs.starfarer.api.combat.WeaponAPI
 import com.fs.starfarer.api.util.IntervalUtil
 import com.fs.starfarer.api.util.Misc
-import org.lazywizard.lazylib.CollisionUtils
 import org.lazywizard.lazylib.MathUtils
-import org.lwjgl.util.vector.Vector2f
 import java.awt.Color
 
-class dakka_FogGenerator : EveryFrameWeaponEffectPlugin {
+class FogGenerator : EveryFrameWeaponEffectPlugin {
     private val interval = IntervalUtil(0.1f, 0.15f)
 
     override fun advance(amount: Float, engine: CombatEngineAPI, weapon: WeaponAPI) {

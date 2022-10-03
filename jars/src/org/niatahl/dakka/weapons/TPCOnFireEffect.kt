@@ -1,4 +1,4 @@
-package data.scripts.weapons
+package org.niatahl.dakka.weapons
 
 import com.fs.starfarer.api.combat.CombatEngineAPI
 import com.fs.starfarer.api.combat.DamagingProjectileAPI
@@ -8,28 +8,28 @@ import com.fs.starfarer.api.util.Misc
 import org.lazywizard.lazylib.MathUtils
 import java.awt.Color
 
-class dakka_TPCOnFireEffect : OnFireEffectPlugin {
+class TPCOnFireEffect : OnFireEffectPlugin {
     override fun onFire(projectile: DamagingProjectileAPI, weapon: WeaponAPI, engine: CombatEngineAPI) {
         val effectCol = Color(
-                projectile.projectileSpec.fringeColor.red,
-                projectile.projectileSpec.fringeColor.green,
-                projectile.projectileSpec.fringeColor.blue,
-                100
+            projectile.projectileSpec.fringeColor.red,
+            projectile.projectileSpec.fringeColor.green,
+            projectile.projectileSpec.fringeColor.blue,
+            100
         )
         engine.addNebulaParticle(
                 projectile.location,
                 weapon.ship.velocity,
-                MathUtils.getRandomNumberInRange(40f, 60f),
+            MathUtils.getRandomNumberInRange(40f, 60f),
                 1.2f,
                 0.1f,
                 0.3f,
-                MathUtils.getRandomNumberInRange(0.6f, 1.6f),
-                Color(150, 150, 150, 100),
+            MathUtils.getRandomNumberInRange(0.6f, 1.6f),
+            Color(150, 150, 150, 100),
                 true
         )
         engine.addHitParticle(
                 projectile.location,
-                Misc.ZERO,
+            Misc.ZERO,
                 200f,
                 0.7f,
                 0.1f,

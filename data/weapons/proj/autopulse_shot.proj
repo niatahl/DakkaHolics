@@ -1,5 +1,5 @@
 {
-	"everyFrameEffect":"data.scripts.weapons.tahlan_ProjectileGlowEffect",
+	"everyFrameEffect":"org.niatahl.dakka.ProjectileGlowEffect",
 	"length":90.0,
 	"width":12.0,
 	"hitGlowRadius":50,

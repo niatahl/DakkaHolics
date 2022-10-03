@@ -1,4 +1,4 @@
-package data.scripts.weapons
+package org.niatahl.dakka.weapons
 
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
@@ -6,7 +6,7 @@ import data.scripts.util.MagicRender
 import org.lwjgl.util.vector.Vector2f
 import java.awt.Color
 
-class dakka_PlasmaGlowEffect : EveryFrameWeaponEffectPlugin, OnFireEffectPlugin {
+class PlasmaGlowEffect : EveryFrameWeaponEffectPlugin, OnFireEffectPlugin {
     private val registeredProjectiles: MutableList<DamagingProjectileAPI> = ArrayList()
     override fun onFire(projectile: DamagingProjectileAPI, weapon: WeaponAPI, engine: CombatEngineAPI) {
         registeredProjectiles.add(projectile)
@@ -21,12 +21,12 @@ class dakka_PlasmaGlowEffect : EveryFrameWeaponEffectPlugin, OnFireEffectPlugin 
                 continue
             }
             MagicRender.singleframe(
-                    Global.getSettings().getSprite("fx", "tahlan_dakka_glow"),
-                    proj.location,
-                    Vector2f(200f, 200f),
-                    proj.facing,
-                    Color(246, 62, 122, 54),
-                    true
+                Global.getSettings().getSprite("fx", "tahlan_dakka_glow"),
+                proj.location,
+                Vector2f(200f, 200f),
+                proj.facing,
+                Color(246, 62, 122, 54),
+                true
             )
         }
         for (proj in toRemove) {
