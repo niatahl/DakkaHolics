@@ -2,7 +2,7 @@ package org.niatahl.dakka.weapons
 
 import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.*
-import data.scripts.util.MagicRender
+import org.magiclib.util.MagicRender
 import org.lwjgl.util.vector.Vector2f
 import java.awt.Color
 

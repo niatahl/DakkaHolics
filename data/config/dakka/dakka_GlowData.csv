@@ -1,6 +1,8 @@
 id,sprite,width,length,color
 #Vanilla,,,,
 plasma_shot,dakka_base_glow,256,256,"[246,62,122,54]"
+gigacannon_shot,dakka_base_glow,256,256,"[150,100,255,40]"
+amblaster_shot,dakka_base_glow,128,128,"[150,100,255,30]"
 mjolnir_shot,dakka_base_glow,200,200,"[95,75,255,95]"
 autopulse_shot,dakka_base_glow,130,220,"[70,70,255,30]"
 pulselaser_shot,dakka_base_glow,110,190,"[50,255,50,30]"
@@ -11,6 +13,7 @@ lightdualac_shot,dakka_base_glow,40,40,"[245,255,235,20]"
 lightac_shot,dakka_base_glow,40,40,"[245,255,235,20]"
 ionpulser_shot,dakka_base_glow,100,100,"[25,100,175,40]"
 heavyblaster_shot,dakka_base_glow,200,200,"[10,10,255,30]"
+kineticblaster_shot,dakka_base_glow,200,240,"[220,220,220,20]"
 hellbore_shot,dakka_base_glow,200,200,"[255,90,0,30]"
 hephag_shot,dakka_base_glow,100,100,"[255,200,20,20]"
 gauss_shot,dakka_base_glow,200,200,"[50,50,255,40]"

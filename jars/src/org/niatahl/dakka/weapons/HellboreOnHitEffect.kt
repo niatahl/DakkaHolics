@@ -13,19 +13,19 @@ class HellboreOnHitEffect : OnHitEffectPlugin {
     override fun onHit(projectile: DamagingProjectileAPI, target: CombatEntityAPI, point: Vector2f, shieldHit: Boolean, damageResult: ApplyDamageResultAPI, engine: CombatEngineAPI) {
         val effectCol = Color(-0x32259ef5, true)
         engine.addHitParticle(
-                projectile.location,
+            projectile.location,
             Misc.ZERO,
-                300f,
-                1f,
-                0.1f,
-                effectCol
+            300f,
+            1f,
+            0.1f,
+            effectCol
         )
         engine.spawnExplosion(
-                projectile.location,
+            projectile.location,
             Misc.ZERO,
-                effectCol.brighter(),
-                120f,
-                0.2f
+            effectCol,
+            120f,
+            0.6f
         )
     }
 }

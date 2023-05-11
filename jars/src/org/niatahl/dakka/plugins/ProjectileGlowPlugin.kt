@@ -4,8 +4,8 @@ import com.fs.starfarer.api.Global
 import com.fs.starfarer.api.combat.BaseEveryFrameCombatPlugin
 import com.fs.starfarer.api.combat.CombatEngineAPI
 import com.fs.starfarer.api.input.InputEventAPI
-import data.scripts.util.MagicRender
-import data.scripts.util.MagicSettings
+import org.magiclib.util.MagicRender
+import org.magiclib.util.MagicSettings
 import org.json.JSONArray
 import org.json.JSONException
 import org.lwjgl.util.vector.Vector2f

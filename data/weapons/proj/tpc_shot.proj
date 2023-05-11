@@ -1,6 +1,6 @@
 {
-    "onFireEffect":"org.niatahl.dakka.weapons.dakka_TPCOnFireEffect",
-    "onHitEffect":"org.niatahl.dakka.weapons.dakka_TPCOnHitEffect",
+    "onFireEffect":"org.niatahl.dakka.weapons.TPCOnFireEffect",
+    "onHitEffect":"org.niatahl.dakka.weapons.TPCOnHitEffect",
     "length":60.0,
 	"width":20,
 }

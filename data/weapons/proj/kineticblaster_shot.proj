@@ -1,22 +1,21 @@
 {
 	"onFireEffect":"org.niatahl.dakka.weapons.HeavyBlasterOnFireEffect",
 	"onHitEffect":"org.niatahl.dakka.weapons.HeavyBlasterOnHitEffect",
+	"id":"kineticblaster_shot",
+	"specClass":"projectile",
 	"spawnType":"BALLISTIC_AS_BEAM",
 	"collisionClass":"RAY",
-	"collisionClassByFighter":"RAY_FIGHTER",
-	"length":30.0,
-	"width":30,
-	"fadeTime":0.3,
-	"fringeColor":[100,100,255,180],
-	"coreColor":[255,255,255,255],
-	"glowColor":[70,70,255,60],
-	"glowRadius":80,
-	"hitGlowRadius":75,	
-	"textureScrollSpeed":64.0,
-	"pixelsPerTexel":1.0,
-	"bulletSprite":"",
+	"collisionClassByFighter":"RAY_FIGHTER",	
+	"hitGlowRadius":75,
+	"length":100.0,
+	"width":14.0,
+	"fadeTime":0.25,
+	"fringeColor":[155,155,155,255],
+	"coreColor":[255,255,255,200],
 	"textureType": [
     	"graphics/fx/dakka_blaster_fringe.png",
     	"graphics/fx/dakka_blaster_core.png"
-		]
+		],
+	"textureScrollSpeed":-50.0,
+	"pixelsPerTexel":1.0
 }

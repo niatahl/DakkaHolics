@@ -1,6 +1,6 @@
 {
 	"plugins":{
-		"dakka_ProjectileGlowPlugin":"data.scripts.plugins.dakka_ProjectileGlowPlugin",
+		"dakka_ProjectileGlowPlugin":"org.niatahl.dakka.plugins.ProjectileGlowPlugin",
 	},
 	"graphics":{
 		"fx":{

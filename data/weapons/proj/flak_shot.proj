@@ -1,6 +1,6 @@
 {
     "behaviorSpec":{"behavior":"PROXIMITY_FUSE",
-                    "onExplosionEffect":"org.niatahl.dakka.weapons.dakka_FlakOnExplosionEffect",
+                    "onExplosionEffect":"org.niatahl.dakka.weapons.FlakOnExplosionEffect",
                     "range":35,
                     "explosionSpec":{"duration":0.1f,
                      "radius":50,

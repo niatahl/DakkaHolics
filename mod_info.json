@@ -3,12 +3,27 @@
 	"name":"zzz Dakkaholics Anonymous", # displayed to the player
 	"utility":"true",
 	"author":"Nia",
-	"version":"1.5",
+	"version":"1.7",
 	"description":"'Also honestly Nia? I seriously wish you weren't making this mod... ' -MesoTroniK",
-	"gameVersion":"0.95a-RC69",
+	"gameVersion":"0.96a-RC6",
 	"replace":[
 		"data/weapons/plasma.wpn",
+		"data/weapons/proj/kineticblaster_shot.proj"
 	],
 	"jars":["jars/DakkaHolics.jar"],
-	"modPlugin":"data.scripts.dakka_ModPlugin"
+	"modPlugin":"org.niatahl.dakka.DakkaModPlugin",
+	"dependencies": [
+		{
+			"id": "lw_lazylib",
+			"name": "LazyLib",
+		},
+		{
+			"id": "MagicLib",
+			"name": "MagicLib",
+		},
+		{
+			"id": "$$$_trailermoments",
+			"name": "Trailer Moments",
+		}
+	]
 }

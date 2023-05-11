@@ -1,4 +1,4 @@
 {
     "onHitEffect":"org.niatahl.dakka.weapons.HellboreOnHitEffect",
-    "onFireEffect":"org.niatahl.dakka.weapons.dakka_HellboreOnFireEffect"
+    "onFireEffect":"org.niatahl.dakka.weapons.HellboreOnFireEffect"
 }

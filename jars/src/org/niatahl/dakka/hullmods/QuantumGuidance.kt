@@ -11,7 +11,7 @@ import org.lazywizard.lazylib.combat.CombatUtils
 
 class QuantumGuidance : BaseHullMod() {
     private val alreadyRegisteredProjectiles: MutableList<DamagingProjectileAPI> = ArrayList()
-    override fun getDescriptionParam(index: Int, hullSize: HullSize, ship: ShipAPI): String? {
+    override fun getDescriptionParam(index: Int, hullSize: HullSize?, ship: ShipAPI?): String? {
         if (index == 0) return "ballistic"
         return if (index == 1) "energy" else null
     }
@@ -24,9 +24,8 @@ class QuantumGuidance : BaseHullMod() {
                 alreadyRegisteredProjectiles.add(proj)
                 val weapon = proj.weapon ?: continue
                 if (!(weapon.type == WeaponAPI.WeaponType.ENERGY || weapon.type == WeaponAPI.WeaponType.BALLISTIC)) continue
-                target = ship.getWeaponGroupFor(weapon).let { group ->
-                    if (group.isAutofiring && group !== ship.selectedGroupAPI) weapon else ship.shipTarget
-                } as ShipAPI?
+                val group = ship.getWeaponGroupFor(weapon)
+                target = if (group != null && group.isAutofiring && group !== ship.selectedGroupAPI) group.getAutofirePlugin(weapon).targetShip else ship.shipTarget
                 engine.addPlugin(ProjectileGuidancePlugin(proj, target))
             }
         }

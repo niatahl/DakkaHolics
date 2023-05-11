@@ -1,0 +1,4 @@
+{
+	"onFireEffect":"org.niatahl.dakka.weapons.HeavyBlasterOnFireEffect",
+	"onHitEffect":"org.niatahl.dakka.weapons.HeavyBlasterOnHitEffect"
+}
