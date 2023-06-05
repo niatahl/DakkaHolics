@@ -1,10 +1,14 @@
 {
+	"onFireEffect":"org.niatahl.dakka.weapons.DevaOnFireEffect",
+	"fringeColor":[255,200,70,235],
+	"coreColor":[255,200,200,180],
+	"glowColor": [255,200,100,20],
+	"glowRadius":40,
 	"behaviorSpec":{"behavior":"PROXIMITY_FUSE",
 					"onExplosionEffect":"org.niatahl.dakka.weapons.FlakOnExplosionEffect",
 					"shotRangeVariance":0.75,
 					"range":25,
-					"explosionSpec":{"duration":0.12f,
-
+					"explosionSpec":{"duration":0.12,
 									 "radius":55,
 									 "coreRadius":30, # full damage within core radius - at least equal to proximity fuse range
 									 "collisionClass":PROJECTILE_FF,
@@ -13,7 +17,7 @@
 									 "particleSizeRange":4.0,
 									 "particleDuration":1,
 									 "particleCount":25,
-									 "particleColor":[255,225,125,255],
+									 "particleColor":[255,225,125,155],
 									 "explosionColor":[255,225,125,125],
 									 "sound":"devastator_explosion"},
 					}

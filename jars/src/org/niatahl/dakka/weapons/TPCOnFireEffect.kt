@@ -6,6 +6,7 @@ import com.fs.starfarer.api.combat.OnFireEffectPlugin
 import com.fs.starfarer.api.combat.WeaponAPI
 import com.fs.starfarer.api.util.Misc
 import org.lazywizard.lazylib.MathUtils
+import org.magiclib.kotlin.modify
 import java.awt.Color
 
 class TPCOnFireEffect : OnFireEffectPlugin {
@@ -17,30 +18,30 @@ class TPCOnFireEffect : OnFireEffectPlugin {
             100
         )
         engine.addNebulaParticle(
-                projectile.location,
-                weapon.ship.velocity,
+            projectile.location,
+            weapon.ship.velocity,
             MathUtils.getRandomNumberInRange(40f, 60f),
-                1.2f,
-                0.1f,
-                0.3f,
+            1.2f,
+            0.1f,
+            0.3f,
             MathUtils.getRandomNumberInRange(0.6f, 1.6f),
             Color(150, 150, 150, 100),
-                true
+            true
         )
-        engine.addHitParticle(
-                projectile.location,
+        engine.addSmoothParticle(
+            projectile.location,
             Misc.ZERO,
-                200f,
-                0.7f,
-                0.1f,
-                effectCol.brighter()
+            200f,
+            0.7f,
+            0.1f,
+            effectCol.brighter()
         )
         engine.spawnExplosion(
-                projectile.location,
-                weapon.ship.velocity,
-                effectCol.brighter(),
-                30f,
-                0.15f
+            projectile.location,
+            weapon.ship.velocity,
+            effectCol.modify(alpha = 50),
+            30f,
+            0.15f
         )
     }
 }

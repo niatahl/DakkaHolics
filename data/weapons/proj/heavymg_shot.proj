@@ -1,0 +1,6 @@
+{
+	"onFireEffect":"org.niatahl.dakka.weapons.MGOnFireEffect",
+	"length":35.0,
+	"glowColor":[245,245,245,10],
+	"glowRadius":8
+}

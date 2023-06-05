@@ -13,7 +13,7 @@ import org.lwjgl.util.vector.Vector2f
 import java.awt.Color
 
 class ReaperOnHitEffect : OnHitEffectPlugin {
-    override fun onHit(projectile: DamagingProjectileAPI, target: CombatEntityAPI, point: Vector2f, shieldHit: Boolean, damageResult: ApplyDamageResultAPI, engine: CombatEngineAPI) {
+    override fun onHit(projectile: DamagingProjectileAPI, target: CombatEntityAPI?, point: Vector2f, shieldHit: Boolean, damageResult: ApplyDamageResultAPI, engine: CombatEngineAPI) {
         engine.spawnExplosion(point, Misc.ZERO, PARTICLE_COLOR, 500f, 1.2f)
         engine.spawnExplosion(point, Misc.ZERO, CORE_COLOR, 300f, 0.8f)
         engine.addSmoothParticle(point, Misc.ZERO, 1000f, 1f, 0.1f, FLASH_COLOR)

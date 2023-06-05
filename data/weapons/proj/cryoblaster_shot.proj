@@ -1,0 +1,5 @@
+{
+	"onHitEffect":"org.niatahl.dakka.weapons.CryoblasterEffect",
+	"onFireEffect":"org.niatahl.dakka.weapons.CryoblasterEffect",
+	"collisionClassByFighter":"RAY_FIGHTER",
+}

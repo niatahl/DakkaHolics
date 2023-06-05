@@ -1,4 +1,5 @@
 {
+	"onFireEffect":"org.niatahl.dakka.weapons.ChaingunOnFireEffect",
 	"length":32.0,
 	"width":4.0,
 	"fringeColor":[255,200,70,235],

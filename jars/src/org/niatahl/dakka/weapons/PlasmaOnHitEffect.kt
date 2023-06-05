@@ -11,7 +11,7 @@ import org.lwjgl.util.vector.Vector2f
 import java.awt.Color
 
 class PlasmaOnHitEffect : OnHitEffectPlugin {
-    override fun onHit(projectile: DamagingProjectileAPI, target: CombatEntityAPI, point: Vector2f, shieldHit: Boolean, damageResult: ApplyDamageResultAPI, engine: CombatEngineAPI) {
+    override fun onHit(projectile: DamagingProjectileAPI, target: CombatEntityAPI?, point: Vector2f, shieldHit: Boolean, damageResult: ApplyDamageResultAPI, engine: CombatEngineAPI) {
         val effectCol = Color(
             projectile.projectileSpec.fringeColor.red,
             projectile.projectileSpec.fringeColor.green,
@@ -20,32 +20,32 @@ class PlasmaOnHitEffect : OnHitEffectPlugin {
         )
 
         engine.addHitParticle(
-                projectile.location,
+            projectile.location,
             Misc.ZERO,
-                200f,
-                0.8f,
-                0.1f,
-                effectCol
+            200f,
+            0.8f,
+            0.1f,
+            effectCol
         )
         engine.addSmoothParticle(
-                projectile.location,
+            projectile.location,
             Misc.ZERO,
-                300f,
-                0.8f,
-                0.1f,
-                effectCol
+            300f,
+            0.8f,
+            0.1f,
+            effectCol
         )
         for (i in 0..4) {
             engine.addNebulaParticle(
-                    projectile.location,
+                projectile.location,
                 MathUtils.getRandomPointInCircle(Misc.ZERO, 15f),
                 MathUtils.getRandomNumberInRange(50f, 100f),
-                    2f,
-                    0f,
-                    0.3f,
+                2f,
+                0f,
+                0.3f,
                 MathUtils.getRandomNumberInRange(1.5f, 3f),
                 Color(197, 239, 246, 40),
-                    true
+                true
             )
         }
     }

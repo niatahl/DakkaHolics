@@ -13,7 +13,8 @@ lightdualac_shot,dakka_base_glow,40,40,"[245,255,235,20]"
 lightac_shot,dakka_base_glow,40,40,"[245,255,235,20]"
 ionpulser_shot,dakka_base_glow,100,100,"[25,100,175,40]"
 heavyblaster_shot,dakka_base_glow,200,200,"[10,10,255,30]"
-kineticblaster_shot,dakka_base_glow,200,240,"[220,220,220,20]"
+kineticblaster_shot,dakka_base_glow,200,240,"[220,220,220,30]"
+cryoblaster_shot,dakka_base_glow,180,200,"[100,150,255,50]"
 hellbore_shot,dakka_base_glow,200,200,"[255,90,0,30]"
 hephag_shot,dakka_base_glow,100,100,"[255,200,20,20]"
 gauss_shot,dakka_base_glow,200,200,"[50,50,255,40]"
@@ -35,6 +36,9 @@ railgun_rem_shot,dakka_base_glow,60,60,"[235,255,255,30]"
 #ScalarTech,,,,
 tahlan_lace_shot,dakka_base_glow,110,160,"[100,200,255,30]"
 tahlan_lacette_shot,dakka_base_glow,110,160,"[100,200,255,30]"
+,,,,
+#Tahlan,,,,
+tahlan_hellspitter_shot,dakka_base_glow,256,256,"[255,60,20,54]"
 ,,,,
 #IndEvo,,,,
 IndEvo_pulsed_shot,dakka_base_glow,90,100,"[150,225,250,20]"

@@ -9,40 +9,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd5df36f-48b3-4630-8632-8d58a556741c" name="Changes" comment="Forgot some files">
-      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/BeamFlashEffect.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/GigaOnFireEffect.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/GigaOnHitEffect.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/HeavyBlasterOnFireEffect.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/HeavyBlasterOnHitEffect.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/HyvelOnFireEffect.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/KineticBlasterOnFireEffect.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/MaulerOnFireEffect.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/DakkaHolics.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/DakkaHolics.iml" afterDir="false" />
+    <list default="true" id="bd5df36f-48b3-4630-8632-8d58a556741c" name="Changes" comment="errrrrr">
+      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/ChaingunOnFireEffect.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/CryoblasterEffect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/DevaOnFireEffect.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/MGOnFireEffect.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/MiningBlasterOnFireEffect.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/config/dakka/dakka_GlowData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/dakka/dakka_GlowData.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/modFiles/magicTrail_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/modFiles/magicTrail_data.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/config/settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/config/settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" beforeDir="false" afterPath="$PROJECT_DIR$/data/hullmods/hull_mods.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/weapons/eis_dualrailgun.wpn" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapons/plasma.wpn" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/plasma.wpn" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapons/proj/chaingun_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/proj/chaingun_shot.proj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/weapons/proj/devastator_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/proj/devastator_shot.proj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/weapons/proj/dualflak_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/proj/dualflak_shot.proj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/weapons/proj/flak_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/proj/flak_shot.proj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/weapons/proj/gauss_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/proj/gauss_shot.proj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/weapons/proj/heavyblaster_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/proj/heavyblaster_shot.proj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/weapons/proj/hellbore_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/proj/hellbore_shot.proj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/weapons/proj/reaper_torp.proj" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/proj/reaper_torp.proj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/weapons/proj/tpc_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/proj/tpc_shot.proj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/weapons/weapon_data.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/graphics/fx/dakka_shockwave.png" beforeDir="false" afterPath="$PROJECT_DIR$/graphics/fx/dakka_shockwave.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/weapons/proj/miningblaster_shot.proj" beforeDir="false" afterPath="$PROJECT_DIR$/data/weapons/proj/miningblaster_shot.proj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/jars/DakkaHolics.jar" beforeDir="false" afterPath="$PROJECT_DIR$/jars/DakkaHolics.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/hullmods/QuantumGuidance.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/hullmods/QuantumGuidance.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/plugins/ProjectileGlowPlugin.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/plugins/ProjectileGlowPlugin.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/HellboreOnFireEffect.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/HellboreOnFireEffect.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/HellboreOnHitEffect.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/HellboreOnHitEffect.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/MjolnirOnFireEffect.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/MjolnirOnFireEffect.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/PlasmaGlowEffect.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/PlasmaGlowEffect.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/ReaperOnHitEffect.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/ReaperOnHitEffect.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/FlakOnExplosionEffect.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/FlakOnExplosionEffect.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/KineticBlasterOnFireEffect.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/PlasmaOnHitEffect.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/PlasmaOnHitEffect.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/TPCOnFireEffect.kt" beforeDir="false" afterPath="$PROJECT_DIR$/jars/src/org/niatahl/dakka/weapons/TPCOnFireEffect.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mod_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/mod_info.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +124,14 @@
       <option name="project" value="LOCAL" />
       <updated>1664792577328</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="errrrrr">
+      <created>1683808527774</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1683808527774</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -159,7 +149,8 @@
     <MESSAGE value="aaaaaaaaaaaaaaaaaaah" />
     <MESSAGE value="Large refactor" />
     <MESSAGE value="Forgot some files" />
-    <option name="LAST_COMMIT_MESSAGE" value="Forgot some files" />
+    <MESSAGE value="errrrrr" />
+    <option name="LAST_COMMIT_MESSAGE" value="errrrrr" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
