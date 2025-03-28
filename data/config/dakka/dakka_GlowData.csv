@@ -11,7 +11,8 @@ mark9_shot,dakka_base_glow,100,100,"[245,255,235,20]"
 heavyac_shot,dakka_base_glow,60,60,"[245,255,235,20]"
 lightdualac_shot,dakka_base_glow,40,40,"[245,255,235,20]"
 lightac_shot,dakka_base_glow,40,40,"[245,255,235,20]"
-ionpulser_shot,dakka_base_glow,100,100,"[25,100,175,40]"
+ionpulser_shot,dakka_base_glow,100,100,"[25,100,175,60]"
+dakka_ionpulser_shot,dakka_base_glow,100,100,"[25,100,175,60]"
 heavyblaster_shot,dakka_base_glow,200,200,"[10,10,255,30]"
 kineticblaster_shot,dakka_base_glow,200,240,"[220,220,220,30]"
 cryoblaster_shot,dakka_base_glow,180,200,"[100,150,255,50]"
@@ -39,6 +40,7 @@ tahlan_lacette_shot,dakka_base_glow,110,160,"[100,200,255,30]"
 ,,,,
 #Tahlan,,,,
 tahlan_hellspitter_shot,dakka_base_glow,256,256,"[255,60,20,54]"
+tahlan_ppa_shot,dakka_base_glow,180,200,"[100,150,255,20]"
 ,,,,
 #IndEvo,,,,
 IndEvo_pulsed_shot,dakka_base_glow,90,100,"[150,225,250,20]"
@@ -48,3 +50,10 @@ IndEvo_riftgun_shot,dakka_base_glow,120,180,"[100,60,255,50]"
 #DomHist,,,,
 domhist_overhead_shot,dakka_base_glow,100,100,"[25,100,175,40]"
 ,,,,
+#Lost Sector,,,,
+nskr_collector_shot,dakka_base_glow,200,300,"[255,101,255,40]"
+nskr_inverter_shot,dakka_base_glow,150,180,"[255,27,129,40]"
+,,,,
+#KoL,,,,
+zea_plasma_chaingun_shot,dakka_base_glow,90,90,"[246,62,122,54]"
+zea_thermal_shot,dakka_base_glow,180,180,"[0,166,255,54]"

@@ -16,7 +16,7 @@
 	"pixelsPerTexel":1.0,
 	"bulletSprite":"",
 	"textureType": [
-    	"graphics/fx/dakka_blaster_fringe.png",
-    	"graphics/fx/dakka_blaster_core.png"
-		]
+		"graphics/fx/dakka_blaster_fringe.png",
+		"graphics/fx/dakka_blaster_core.png"
+	]
 }

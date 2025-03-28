@@ -1,0 +1,7 @@
+{
+	"beamEffect":"org.niatahl.dakka.weapons.BeamFlashEffect",
+	"width":15.0,
+	"textureType":ROUGH,
+	"textureScrollSpeed":300.0,
+	"pixelsPerTexel":3.0
+}

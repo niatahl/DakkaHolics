@@ -1,5 +1,6 @@
 package org.niatahl.dakka.weapons;
 
+import com.fs.starfarer.api.Global;
 import com.fs.starfarer.api.combat.BeamAPI;
 import com.fs.starfarer.api.combat.BeamEffectPlugin;
 import com.fs.starfarer.api.combat.CombatEngineAPI;
@@ -22,6 +23,8 @@ public class BeamFlashEffect implements BeamEffectPlugin {
             if (beam.didDamageThisFrame())
                 engine.addHitParticle(beam.getTo(), beam.getSource().getVelocity(), size * 3f, 0.8f, dur, beam.getFringeColor());
         }
+
+        
 
     }
 }

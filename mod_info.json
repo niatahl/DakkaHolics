@@ -3,9 +3,9 @@
 	"name":"zzz Dakkaholics Anonymous", # displayed to the player
 	"utility":"true",
 	"author":"Nia",
-	"version":"1.8",
+	"version":"1.9",
 	"description":"'Also honestly Nia? I seriously wish you weren't making this mod... ' -MesoTroniK",
-	"gameVersion":"0.96a-RC6",
+	"gameVersion":"0.98",
 	"replace":[
 		"data/weapons/plasma.wpn",
 		"data/weapons/proj/kineticblaster_shot.proj"
